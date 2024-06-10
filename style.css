@@ -11,6 +11,8 @@
 
 body {
     min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(248, 248, 248);
 }
 
 img, picture, svg, video {
@@ -18,20 +20,29 @@ img, picture, svg, video {
     max-width: 100%;
 }
 
-
+/*Basic Page Layout*/
 body {
+    font-family: system-ui, "Segoe UI", 
+                 Roboto, Helvetica, Arial, sans-serif, 
+                 "Apple Color Emoji", "Segoe UI Emoji", 
+                 "Segoe UI Symbol";
+
     display: flex;
-    overflow-y: hidden;
-    border: 9px black solid;
+    overflow-y: clip;
 }
 
+em {
+    font-style: italic;
+}
+
+/*Background Section*/
 .header {
     background-image: url(./img/Green\ leaf\ plant\ close\ up.jpg);
     background-position: center;
     background-size: cover;
 
     position: relative;
-    width: 40%;
+    min-width: 37%;
 }
 
 .header > .logo-container {
@@ -44,7 +55,7 @@ body {
     top: 22%;
     background-size:contain ;
 
-    padding: 15px;
+    padding: 11px;
 
     color: white;
 }
@@ -58,7 +69,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .logo-container .logo {
@@ -72,20 +83,22 @@ body {
 
 .logo-container .logo + h1 {
     font-family: Norse-Bold;
-    font-size: 7em;
+    font-size: 6em;
     text-align: center;
     padding-top: 30px;
 }
 
+/*Background image source & credit*/
 div.bg-info,
 a:link,
 a:visited,
 a:hover,
 a:active {
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 div.bg-info {
+    font-size: 0.9rem;
     /*Center horizontally*/
     width: 100%;
     text-align: center;
@@ -93,4 +106,44 @@ div.bg-info {
     /*Align to the bottom*/
     position: absolute;
     bottom: 1em;
+}
+
+/*Form Styling*/
+.caption {
+    margin: 20% 10% 65px 50px;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    min-width: 20ch;
+    max-width: 50ch;
+}
+
+.caption > p + p {
+    margin-top: 1.5rem;
+}
+
+button[type="submit"],
+div.login {
+    margin-left: 50px;
+}
+
+#form {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 7px 6px rgb(0 0 0 / 10%);
+    padding-left: 50px;
+}
+
+.inputs > div{
+    display: flex;  
+}
+
+.form-row > div {
+    margin-right: 80px;
+}
+
+.form-row input{
+    display: block;
+
+    border: #dbdbdb solid 1px;
 }
