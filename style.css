@@ -120,7 +120,7 @@ div.bg-info {
     font-weight: 500;
     line-height: 1.2;
 
-    margin: 180px auto 50px 50px;
+    margin: 180px 10% 50px 50px;
 }
 
 .caption {
@@ -139,7 +139,7 @@ div.login {
 
 /*Form Styling*/
 #form > h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
 }
 
@@ -149,11 +149,11 @@ div.login {
     padding: 20px 50px 20px 50px ;
 }
 
-.inputs > div{
+.form-row-container > .form-row{
     display: flex;  
 }
 
-.form-row > div {
+.form-row > .input{
     margin-right: 80px;
 }
 
