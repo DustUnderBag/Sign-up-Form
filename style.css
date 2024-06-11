@@ -34,7 +34,7 @@ body {
 
 main {
     /*Grow to fill the whole remaining space*/
-    flex: 1 0 auto;
+    flex: 1 1 auto;
 }
 
 em {
@@ -82,7 +82,7 @@ em {
     height: 100%;
 }
 
-@font-face {
+@font-face { /*Site logo font*/
     font-family: Norse-Bold;
     src: url(./font/Norse\ Bold.otf);
 }
@@ -116,12 +116,16 @@ div.bg-info {
 
 /*Main Section spacing*/
 .caption {
-    margin: 20% 10% 65px 50px;
-    min-width: 20ch;
-    max-width: 50ch;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
 
-    font-size: 1.5rem;
-    font-weight: 600;
+    margin: 180px auto 50px 50px;
+}
+
+.caption {
+    min-width: 20ch;
+    max-width: 52ch;
 }
 
 .caption > p + p {
@@ -134,11 +138,15 @@ div.login {
 }
 
 /*Form Styling*/
-#form {
+#form > h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 
+#form {
     background-color: #fff;
     box-shadow: 0 7px 6px rgb(0 0 0 / 10%);
-    padding-left: 50px;
+    padding: 20px 50px 20px 50px ;
 }
 
 .inputs > div{
