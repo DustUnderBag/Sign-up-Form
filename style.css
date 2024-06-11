@@ -29,6 +29,12 @@ body {
 
     display: flex;
     overflow-y: clip;
+    /*border: 10px solid black; */
+}
+
+main {
+    /*Grow to fill the whole remaining space*/
+    flex: 1 0 auto;
 }
 
 em {
@@ -108,14 +114,14 @@ div.bg-info {
     bottom: 1em;
 }
 
-/*Form Styling*/
+/*Main Section spacing*/
 .caption {
     margin: 20% 10% 65px 50px;
+    min-width: 20ch;
+    max-width: 50ch;
 
     font-size: 1.5rem;
     font-weight: 600;
-    min-width: 20ch;
-    max-width: 50ch;
 }
 
 .caption > p + p {
@@ -127,8 +133,9 @@ div.login {
     margin-left: 50px;
 }
 
+/*Form Styling*/
 #form {
-    width: 100%;
+
     background-color: #fff;
     box-shadow: 0 7px 6px rgb(0 0 0 / 10%);
     padding-left: 50px;
