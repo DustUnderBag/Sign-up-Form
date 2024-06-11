@@ -149,7 +149,7 @@ div.login {
     padding: 20px 50px 20px 50px ;
 }
 
-.form-row-container > .form-row{
+.form-row{
     display: flex;  
 }
 
@@ -159,6 +159,5 @@ div.login {
 
 .form-row input{
     display: block;
-
     border: #dbdbdb solid 1px;
 }

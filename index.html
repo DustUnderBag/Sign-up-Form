@@ -1,87 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-up Form</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="logo-container">
-            <div>
-                <img class="logo" src="./img/Odin lined.png" alt="site-logo">
-                <h1 class="logo-name">ODIN</h1>
-            </div>
+      <div class="logo-container">
+        <div>
+          <img class="logo" src="./img/Odin lined.png" alt="site-logo" />
+          <h1 class="logo-name">ODIN</h1>
         </div>
-        <div class="bg-info">Photo By 
-            <a  class="bg-author" href="https://unsplash.com/@haliewestphoto">Halie West</a> 
-            on 
-            <a class="bg-source" href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a>
-        </div>
+      </div>
+      <div class="bg-info">
+        Photo By
+        <a class="bg-author" href="https://unsplash.com/@haliewestphoto"
+          >Halie West</a
+        >
+        on
+        <a
+          class="bg-source"
+          href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA"
+          >Unsplash</a
+        >
+      </div>
     </header>
 
     <main>
-        <div class="caption">
-            <p>This is not a real online service! You know you need something like this in your life to help you realize
-                your deepest dreams.
-                <br>Sign up <em>now</em> to get started.
-            </p>
-            <p>You <em>know</em> you want to.</p>
+      <div class="caption">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams. <br />Sign
+          up <em>now</em> to get started.
+        </p>
+        <p>You <em>know</em> you want to.</p>
+      </div>
+
+      <form id="form" action="" action="post">
+        <h2>Let's do this!</h2>
+
+        <div class="form-row">
+          <div class="input">
+            <label for="first-name">FIRST NAME</label>
+            <input type="text" id="first-name" name="fName" required />
+          </div>
+
+          <div class="input">
+            <label for="last-name">LAST NAME</label>
+            <input type="text" id="last-name" name="lName" required />
+          </div>
         </div>
 
-        <form id="form" action="" action="post">
-            <h2>Let's do this!</h2>
+        <div class="form-row">
+          <div class="input">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" required />
+          </div>
 
-            <div class="form-row-container">
-                <div class="form-row">
-                    <div class="input">
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="fName" required>
-                    </div>
-                    <div class="input">
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" name="lName" required>
-                    </div>
-                </div>
-
-                <div  class="form-row">
-                    <div class="input">
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="input">
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-    
-                </div>
-
-                <div  class="form-row">
-                    <div class="input">
-                        <label for="pwd">PASSWORD</label>
-                        <input type="password" id="pwd" name="pwd" required>
-                    </div>
-                    <div class="input">
-                        <label for="cfm-pwd">CONFIRM PASSWORD</label>
-                        <input type="password" id="cfm-pwd" name="cfm-pwd" required>
-                    </div>
-                </div>
-
-            </div>
-
-        </form>
-
-        <button form="sign-up-form" type="submit">Create Account</button>
-        
-        <div class="login">
-            Already have an account? <a href="">Log in</a>
+          <div class="input">
+            <label for="phone">PHONE NUMBER</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
         </div>
+
+        <div class="form-row">
+          <div class="input">
+            <label for="pwd">PASSWORD</label>
+            <input type="password" id="pwd" name="pwd" required />
+          </div>
+          
+          <div class="input">
+            <label for="cfm-pwd">CONFIRM PASSWORD</label>
+            <input type="password" id="cfm-pwd" name="cfm-pwd" required />
+          </div>
+        </div>
+      </form>
+
+      <button form="sign-up-form" type="submit">Create Account</button>
+
+      <div class="login">Already have an account? <a href="">Log in</a></div>
     </main>
 
     <script src="./script.js" defer></script>
-</body>
-
+  </body>
 </html>
