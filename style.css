@@ -1,3 +1,11 @@
+:root {
+    --color-default: #dbdbdb ;
+    --color-valid: #54e647 ;
+    --color-invalid: #f13636 ;
+    --color-focus: #093d9e;
+    --color-primary: #596D48;
+}
+
 /*Styles Reset Minimal*/
 *, *::before, *::after {
     box-sizing: border-box;
@@ -165,9 +173,13 @@ div.login {
 .input-gp input[type='email'],
 .input-gp input[type='tel'],
 .input-gp input[type='password'] {   
+    appearance: none;
+    --webkit-appearance: none;
+
     display: block;
-    border: #dbdbdb solid 1px;
+    border: var(--color-default) solid 1px;
     border-radius: 6px;
+    outline: none;
 
     width: 325px;
     height: 40px;
@@ -176,9 +188,8 @@ div.login {
     margin-top: 5px;
 }
 
-
 button[type='submit'] {
-    background-color: #596D48;
+    background-color: var(--color-primary);
     border: none;
     border-radius: 6px;
 
@@ -200,7 +211,21 @@ div.login {
 }
 
 div.login > a.login-link {
-    color: #596D48;
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: 700;
+}
+
+/*Styling for input validation*/
+.input-gp > input:focus {
+    border: 1.5px solid var(--color-default) ;
+    box-shadow: 5px 5px 4px #0000002f;
+}
+
+.input-gp > input:user-invalid {
+    border: 1.5px solid var(--color-invalid);
+}
+
+.input-gp > input:user-valid {
+    border: 1.5px solid var(--color-valid);
 }
