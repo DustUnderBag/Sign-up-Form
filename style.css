@@ -121,9 +121,7 @@ div.bg-info {
     line-height: 1.2;
 
     margin: 180px 10% 50px 50px;
-}
 
-.caption {
     min-width: 20ch;
     max-width: 52ch;
 }
@@ -176,4 +174,33 @@ div.login {
     font-size: 1.3rem;
     padding: 8px 10px;
     margin-top: 5px;
+}
+
+
+button[type='submit'] {
+    background-color: #596D48;
+    border: none;
+    border-radius: 6px;
+
+    width: 300px;
+    height: 60px;
+
+    color: white;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    padding: 10px;
+    margin-block: 40px;
+}
+
+div.login {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+div.login > a.login-link {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: 700;
 }
