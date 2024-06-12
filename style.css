@@ -138,26 +138,42 @@ div.login {
 }
 
 /*Form Styling*/
-#form > h2 {
-    font-size: 2rem;
-    font-weight: 500;
-}
-
 #form {
     background-color: #fff;
     box-shadow: 0 7px 6px rgb(0 0 0 / 10%);
-    padding: 20px 50px 20px 50px ;
+    padding: 30px 50px 20px 50px ;
 }
 
-.form-row{
+#form > h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.form-row {
+    margin-bottom: 30px;
     display: flex;  
+    gap: 80px;
 }
 
-.form-row > .input{
-    margin-right: 80px;
+.input-gp label {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #292929;;
 }
 
-.form-row input{
+.input-gp input[type='text'],
+.input-gp input[type='email'],
+.input-gp input[type='tel'],
+.input-gp input[type='password'] {   
     display: block;
     border: #dbdbdb solid 1px;
+    border-radius: 6px;
+
+    width: 325px;
+    height: 40px;
+    font-size: 1.3rem;
+    padding: 8px 10px;
+    margin-top: 5px;
 }
