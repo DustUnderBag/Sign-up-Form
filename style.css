@@ -1,6 +1,6 @@
 :root {
     --color-default: #dbdbdb ;
-    --color-valid: #54e647 ;
+    --color-valid: #23831a ;
     --color-invalid: #f13636 ;
     --color-focus: #093d9e;
     --color-primary: #596D48;
@@ -228,4 +228,23 @@ div.login > a.login-link {
 
 .input-gp > input:user-valid {
     border: 2px solid var(--color-valid);
+}
+
+input + .input-guide {
+    margin-top: 8px;
+    transform: scale(0);
+    transition: transform 0.05s ease-out;
+    transform-origin: top left;
+}
+
+input.clicked + .input-guide {
+    transform: scale(1);
+}
+
+input:user-valid + .input-guide {
+    color: var(--color-valid);
+}
+
+input:user-invalid + .input-guide {
+    color: var(--color-invalid);
 }
