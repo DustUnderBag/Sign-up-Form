@@ -218,14 +218,14 @@ div.login > a.login-link {
 
 /*Styling for input validation*/
 .input-gp > input:focus {
-    border: 1.5px solid var(--color-default) ;
+    border: 2px solid var(--color-primary);
     box-shadow: 5px 5px 4px #0000002f;
 }
 
 .input-gp > input:user-invalid {
-    border: 1.5px solid var(--color-invalid);
+    border: 2px solid var(--color-invalid);
 }
 
 .input-gp > input:user-valid {
-    border: 1.5px solid var(--color-valid);
+    border: 2px solid var(--color-valid);
 }
