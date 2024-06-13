@@ -226,25 +226,40 @@ div.login > a.login-link {
     border: 2px solid var(--color-invalid);
 }
 
+.input-gp > input[type="password"].notMatched {
+    border: 2px solid var(--color-invalid);
+}
+
+
 .input-gp > input:user-valid {
     border: 2px solid var(--color-valid);
 }
 
-input + .input-guide {
-    margin-top: 8px;
-    transform: scale(0);
-    transition: transform 0.05s ease-out;
-    transform-origin: top left;
+.input-gp > input[type="password"].matched {
+    border: 2px solid var(--color-valid);
 }
 
-input.clicked + .input-guide {
-    transform: scale(1);
+input + .input-guide {
+    margin-top: 5px;
+    transform: scaleY(0);
+    transition: transform 0.2s ease-in-out;
+    transform-origin: top;
+}
+
+input.clicked + .input-guide,
+input:focus:valid + .input-guide {
+    transform: scaleY(1);
 }
 
 input:user-valid + .input-guide {
-    color: var(--color-valid);
+    transform: scaleY(0);
 }
 
 input:user-invalid + .input-guide {
+    color: var(--color-invalid);
+}
+
+.input-gp > input[type="password"].notMatched + .input-guide {
+    transform: scaleY(1);
     color: var(--color-invalid);
 }
