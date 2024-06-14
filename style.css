@@ -1,8 +1,10 @@
 :root {
+    /*Border colors*/
     --color-default: #dbdbdb ;
+    --color-focus: #5e69ff;
     --color-valid: #23831a ;
-    --color-invalid: #f13636 ;
-    --color-focus: #093d9e;
+    --color-invalid: #f13636;
+
     --color-primary: #596D48;
 }
 
@@ -36,13 +38,15 @@ body {
                  "Segoe UI Symbol";
 
     display: flex;
-    overflow-y: clip;
+    overflow-y: auto;
     /*border: 10px solid black; */
 }
 
 main {
     /*Grow to fill the whole remaining space*/
     flex: 1 1 auto;
+    padding-bottom: 100px;
+
 }
 
 em {
@@ -55,8 +59,9 @@ em {
     background-position: center;
     background-size: cover;
 
+    width: 35%;
+
     position: relative;
-    min-width: 37%;
 }
 
 .header > .logo-container {
@@ -65,8 +70,7 @@ em {
     width: 100%;
     height: 150px;  
 
-    position: absolute;
-    top: 22%;
+    margin-top: 250px;
     background-size:contain ;
 
     padding: 11px;
@@ -97,7 +101,7 @@ em {
 
 .logo-container .logo + h1 {
     font-family: Norse-Bold;
-    font-size: 6em;
+    font-size: 6rem;
     text-align: center;
     padding-top: 30px;
 }
@@ -119,7 +123,7 @@ div.bg-info {
 
     /*Align to the bottom*/
     position: absolute;
-    bottom: 1em;
+    bottom: 1rem;
 }
 
 /*Main Section spacing*/
@@ -157,7 +161,7 @@ div.login {
 }
 
 .form-row {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     display: flex;  
     gap: 80px;
 }
@@ -218,13 +222,11 @@ div.login > a.login-link {
 
 /*Styling for input validation*/
 .input-gp > input:focus {
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-focus);
     box-shadow: 5px 5px 4px #0000002f;
 }
 
-.input-gp > input:user-invalid {
-    border: 2px solid var(--color-invalid);
-}
+
 
 .input-gp > input[type="password"].notMatched {
     border: 2px solid var(--color-invalid);
@@ -262,4 +264,92 @@ input:user-invalid + .input-guide {
 .input-gp > input[type="password"].notMatched + .input-guide {
     transform: scaleY(1);
     color: var(--color-invalid);
+}
+.input-gp > input:user-invalid {
+    border: 2px solid var(--color-invalid);
+}
+
+
+/*Layout on mobile device*/
+@media screen and (max-width: 1180px) {
+    body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header {
+        width: 100%;
+        height: 300px;
+        background-attachment: fixed;
+        background-position: top;
+    }
+
+    .header > .logo-container {
+        margin: 0;
+        height: 100px;
+        position: sticky;
+        top: 0;
+    }
+
+    .logo-container > div {
+        justify-content: flex-start;
+
+        margin: 4px auto 0 12px;
+    }
+
+    .header > .logo-container .logo-name {
+        font-size: 4.5rem;
+        padding-top: 8px;
+    }
+
+    .caption {
+        margin: 40px 20px 40px 20px;
+        font-size: 1.5rem;
+    }
+
+    #form {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .form-row {
+        justify-content:center;
+        flex-wrap: wrap;
+    }
+
+    button[type='submit'],
+    button[type='submit'] + .login {
+        margin-inline: 0;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding-bottom: 60px;
+    }
+}
+
+
+@media screen and (max-width: 830px) {
+    .caption {
+        font-size: 1.5rem;
+    }
+
+    #form > h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .input-guide {
+        font-size: 0.8rem;
+    }
 }
