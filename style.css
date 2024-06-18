@@ -64,7 +64,7 @@ em {
     position: relative;
 }
 
-.header > .logo-container {
+.header > .nav {
     background-color: rgb(0 0 0 / 50%);
 
     width: 100%;
@@ -78,7 +78,7 @@ em {
     color: white;
 }
 
-.logo-container > div{
+.nav > div{
     width: 70%;
     height: 100%;
 
@@ -90,7 +90,7 @@ em {
     gap: 8px;
 }
 
-.logo-container .logo {
+.nav .logo {
     height: 100%;
 }
 
@@ -99,7 +99,7 @@ em {
     src: url(./font/Norse\ Bold.otf);
 }
 
-.logo-container .logo + h1 {
+.nav .logo + h1 {
     font-family: Norse-Bold;
     font-size: 6rem;
     text-align: center;
@@ -284,20 +284,20 @@ input:user-invalid + .input-guide {
         background-position: top;
     }
 
-    .header > .logo-container {
+    .header > .nav {
         margin: 0;
         height: 100px;
         position: sticky;
         top: 0;
     }
 
-    .logo-container > div {
+    .nav > div {
         justify-content: flex-start;
 
         margin: 4px auto 0 12px;
     }
 
-    .header > .logo-container .logo-name {
+    .header > .nav .logo-name {
         font-size: 4.5rem;
         padding-top: 8px;
     }
