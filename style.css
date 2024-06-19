@@ -6,6 +6,7 @@
     --color-invalid: #f13636;
 
     --color-primary: #596D48;
+    --color-primary-darken: darken(#596D48, 15%);
 }
 
 /*Styles Reset Minimal*/
@@ -194,12 +195,10 @@ div.login {
 
 button[type='submit'] {
     background-color: var(--color-primary);
-    border: none;
-    border-radius: 6px;
-
     width: 300px;
     height: 60px;
-
+    border: none;
+    border-radius: 6px;
     color: white;
 
     font-size: 1.5rem;
@@ -207,6 +206,36 @@ button[type='submit'] {
 
     padding: 10px;
     margin-block: 40px;
+
+    position: relative;
+    z-index: 1;
+
+    /*Darken background of button*/
+    &::after {
+        content: "";
+        width: 0%;
+        height: 100%;
+        background-color: var(--color-primary);
+        border: none;
+        border-radius: 6px;
+    
+        position: absolute;
+        top: 0;
+        left: 0;  
+
+        z-index: -1;
+        overflow: hidden;
+        transition: all 0.3s;
+    }
+    /*Reveal darken background on hover event*/
+    &:hover::after{
+        width: 100%;
+        filter: brightness(50%); /*Darken its own color*/
+    }
+}
+
+button[type='submit']:hover{
+
 }
 
 div.login {
@@ -225,8 +254,6 @@ div.login > a.login-link {
     border: 2px solid var(--color-focus);
     box-shadow: 5px 5px 4px #0000002f;
 }
-
-
 
 .input-gp > input[type="password"].notMatched {
     border: 2px solid var(--color-invalid);
@@ -268,7 +295,6 @@ input:user-invalid + .input-guide {
 .input-gp > input:user-invalid {
     border: 2px solid var(--color-invalid);
 }
-
 
 /*Layout on mobile device*/
 @media screen and (max-width: 1180px) {
