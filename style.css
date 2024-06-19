@@ -7,6 +7,8 @@
 
     --color-primary: #596D48;
     --color-primary-darken: darken(#596D48, 15%);
+
+    --color-asterisk: rgb(218, 33, 33);
 }
 
 /*Styles Reset Minimal*/
@@ -176,7 +178,7 @@ div.login {
 
 .input-gp label > span {
     font-weight: bolder;
-    color: rgb(218, 33, 33);
+    color: var(--color-asterisk);
 }
 
 .input-gp input[type='text'],
@@ -249,6 +251,24 @@ div.login > a.login-link {
     color: var(--color-primary);
     text-decoration: none;
     font-weight: 700;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        content: "";
+        background-color: var(--color-primary);
+        width: 0;
+        height: 3px;
+        z-index: -1;
+        transition: 0.1s all;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
 }
 
 /*Styling for input validation*/
