@@ -174,6 +174,11 @@ div.login {
     color: #292929;;
 }
 
+.input-gp label > span {
+    font-weight: bolder;
+    color: rgb(218, 33, 33);
+}
+
 .input-gp input[type='text'],
 .input-gp input[type='email'],
 .input-gp input[type='tel'],
@@ -227,15 +232,12 @@ button[type='submit'] {
         overflow: hidden;
         transition: all 0.3s;
     }
+
     /*Reveal darken background on hover event*/
     &:hover::after{
         width: 100%;
         filter: brightness(50%); /*Darken its own color*/
     }
-}
-
-button[type='submit']:hover{
-
 }
 
 div.login {
@@ -259,7 +261,6 @@ div.login > a.login-link {
     border: 2px solid var(--color-invalid);
 }
 
-
 .input-gp > input:user-valid {
     border: 2px solid var(--color-valid);
 }
@@ -282,6 +283,7 @@ input:focus:valid + .input-guide {
 
 input:user-valid + .input-guide {
     transform: scaleY(0);
+    color: var(--color-valid);
 }
 
 input:user-invalid + .input-guide {
