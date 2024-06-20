@@ -27,10 +27,17 @@
 }
 
 body {
-    height: 100dvh;
     min-width: 320px;
-    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;  /* Fallback if svh isn't supported. */
+    height: 100svh;
+    min-height: 900px;
+    overflow-y: auto;
+    
     background-color: rgb(248, 248, 248);
+    font-family: system-ui, "Segoe UI", 
+                 Roboto, Helvetica, Arial, sans-serif, 
+                 "Apple Color Emoji", "Segoe UI Emoji", 
+                 "Segoe UI Symbol";                 
 }
 
 img, picture, svg, video {
@@ -40,14 +47,7 @@ img, picture, svg, video {
 
 /*Basic Page Layout*/
 body {
-    font-family: system-ui, "Segoe UI", 
-                 Roboto, Helvetica, Arial, sans-serif, 
-                 "Apple Color Emoji", "Segoe UI Emoji", 
-                 "Segoe UI Symbol";
-
     display: flex;
-    overflow-y: auto;
-    /*border: 10px solid black; */
 }
 
 main {
@@ -67,7 +67,7 @@ em {
     background-size: cover;
 
     width: 35%;
-
+    
     position: relative;
 }
 
@@ -143,7 +143,7 @@ div.bg-info {
     margin: 8% 10% 50px 50px;
 
     min-width: 20ch;
-    max-width: 52ch;
+    max-width: 46ch;
 }
 
 .caption > p + p {
